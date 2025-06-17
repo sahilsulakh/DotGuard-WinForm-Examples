@@ -18,8 +18,8 @@ namespace YourWorkspaceName                    // <<<--- REPLACE WITH YOUR ACTUA
             var config = new DotGuardConfig
             {
                 // 🔔 Discord Alert Settings
-                DiscordWebhookUrl = "your-webhook-url-here",
-                AdditionalWebhooks = new[] { "backup-webhook-url" }, // Optional
+                DiscordWebhookUrl = "your-webhook-url-here",                    // <<<--- REPLACE WITH YOUR DISCORD WEB HOOK URL
+                AdditionalWebhooks = new[] { "backup-webhook-url" },           // Optional
 
                 // 🛡️ Protection Features
                 EnableAntiDebug = true,         // Block debuggers
@@ -43,13 +43,15 @@ namespace YourWorkspaceName                    // <<<--- REPLACE WITH YOUR ACTUA
                //AssemblyWhitelist = new[] { /* your SHA-256 hashes here */ },
 
                 // 🎨 User Experience
-                //LicenseKey = "your-license-key", // Optional
-                Language = "en",               // Change for other languages
-                EnableUserFeedback = true,     // Show messages to user
-                ViolationMessage = "Security Alert: Unauthorized activity detected!" // Custom message
+                //LicenseKey = "your-license-key",                               // Optional
+
+                Language = "en",                                                // Change for other languages
+                EnableUserFeedback = true,                                     // Show messages to user
+                ViolationMessage = "Security !"                               // Custom message
                 };
+
                // 🚀 Start Protection
-               GuardEngine.Initialize(config);
+               GuardEngine.Initialize(config);                              // <<<--- FOR STARTING DOTGUARD
                Application.EnableVisualStyles();
                Application.SetCompatibleTextRenderingDefault(false);
                Application.Run(new Form1());
